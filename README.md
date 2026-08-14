@@ -29,7 +29,7 @@ MBfW monitors the emulator's generated file dump via the Windows file cache and 
 * **LED Status Indicator**:
     Dark Red (off) = Error, Green = Ready, Red = MIDI activity.
 * **Persistent Configuration**:
-    Saves all parameters automatically.
+    
 
 ---
 
