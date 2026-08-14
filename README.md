@@ -115,3 +115,12 @@ The following software components and Python modules are strictly required:
    
    * **`emulator_exe_name`**
      The name of the EXE file used to detect the process in the task manager and prevent it from starting again. If the name is incorrect, MBfW will force a new emulator instance at every launch.
+
+
+
+---
+
+### Disclaimer
+
+This software is provided "as is", without warranty of any kind. Use this script entirely at your own risk. The developer assumes no liability for any damages, data loss (especially regarding the purging or streaming of MIDI dump files), system crashes, or incompatibilities arising from the use of this program or its interaction with the ARAnyM emulator.
+
