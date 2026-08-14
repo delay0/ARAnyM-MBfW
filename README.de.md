@@ -118,7 +118,9 @@ Folgende Software-Komponenten und Python-Module werden zwingend benötigt:
 
 
 
-
+> * **Hinweis zur MIDI-Dump-Datei (`midi_file_path`):**
+> * **Automatisches Bereinigen:** Bei einem Kaltstart (wenn MBfW den Emulator mitstartet) wird die hier angegebene Datei automatisch gelöscht, um Datenreste alter Sitzungen zu entfernen. Läuft der Emulator bereits, bleibt die Datei unangetastet.
+> * **Keine abspielbare Musikdatei:** Die vom Emulator erzeugte Datei enthält meines Wissens nach ausschließlich den rohen MIDI-Byte-Stream *ohne jegliche Zeitinformationen (Delta-Times)*. Sie ist am Ende **keine abspielbare Standard-MIDI-Datei** und verhält sich im Grunde wie reiner Datenmüll, wenn man sie in einem Media-Player oder Sequenzer öffnen möchte. Sie dient MBfW ausschließlich als flüchtige Echtzeit-Datenpipeline im Arbeitsspeicher.
 ---
 
 ### Haftungsausschluss (Disclaimer)
