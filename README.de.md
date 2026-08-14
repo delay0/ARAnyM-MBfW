@@ -115,3 +115,12 @@ Folgende Software-Komponenten und Python-Module werden zwingend benötigt:
    
    * **`emulator_exe_name`**
      Der Name der EXE-Datei, um den Prozess im Taskmanager zu erkennen und nicht erneut zu starten. Ist der Name falsch, wird MBfW bei jedem Start eine neue Emulator-Instanz erzwingen.
+
+
+
+
+---
+
+### Haftungsausschluss (Disclaimer)
+
+Dieses Softwareprojekt wird "wie besehen" (as is) zur Verfügung gestellt. Die Nutzung dieses Skripts erfolgt vollständig auf eigene Gefahr. Der Entwickler übernimmt keinerlei Haftung für eventuelle Schäden, Datenverlust (insbesondere im Zusammenhang mit dem Bereinigen oder Einlesen von MIDI-Dateien), Systemabstürze oder Inkompatibilitäten, die durch den Betrieb dieses Programms oder das Zusammenspiel mit dem ARAnyM-Emulator entstehen könnten.
