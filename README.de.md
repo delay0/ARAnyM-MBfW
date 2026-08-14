@@ -28,8 +28,8 @@ MBfW überwacht den vom Emulator generierten Datei-Dump über den Windows-Dateic
     Übernahme der Terminalausgaben von ARAnyM (bei Hot-Plug gibt es keine Ausgabe).
 * **LED-Status-Indikator**:
     Dunkelrot (aus) = Fehler,  Grün = Bereit, Rot = MIDI-Aktivität.
-* **Persistente Konfiguration**:
-    Speicherung aller Parameter.
+* **Speicherung aller Parameter**:
+    
 
 ---
 
