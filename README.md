@@ -1,5 +1,3 @@
-Switch to: 🇩🇪 [Deutsch / German](README.de.md)
-
 # ARAnyM-MBfW - ARAnyM MIDI Bridge for Windows (GUI Version)
 
 A resource-friendly, Python-script-based real-time MIDI bridge designed to automatically extract and forward MIDI data from the ARAnyM emulator to Windows MIDI output devices.
