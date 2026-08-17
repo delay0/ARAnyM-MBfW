@@ -2,7 +2,7 @@
 
 A resource-friendly, Python-script-based real-time MIDI bridge designed to automatically extract and forward MIDI data from the ARAnyM emulator to Windows MIDI output devices.
 
-MBfW monitors the emulator's generated file dump via the Windows file cache and streams the data latency-free to a selectable synthesizer or MIDI port.
+MBfW monitors the emulator's generated file dump and streams the data latency-free to a selectable synthesizer or MIDI port.
 
 <p align="center">
   <img src="aranym-mbfw.png" alt="ARAnyM MIDI Bridge GUI">
@@ -18,6 +18,8 @@ MBfW monitors the emulator's generated file dump via the Windows file cache and 
     MBfW automatically starts the emulator alongside the bridge.
 * **Hot-Plugging**:
     MBfW detects if the emulator is already running and hooks up the bridge asynchronously. MBfW can be closed at any time – the bridge will be removed, but the emulator remains running.
+* **Don't annoy me with options**:
+    Without "Start ARAnyM" and "Auto Exit" the program can run in the background, automatically detect whether ARAnyM is currently running, and enable or disable the MIDI bridge accordingly.
 * **Resource-Friendly**:
     Optimized cache streaming without classic file polling (0% hard drive load during operation).
 * **GUI**:
