@@ -228,7 +228,7 @@ class AranymMidiGUI:
         self.root = root
         self.root.title(TITEL)
 
-        # Initialize configuration manager
+        # 1. Initialize configuration manager
         self.cfg = ConfigManager(CONFIG_FILE)
 
         # Load dimensions and coordinates from config
@@ -237,21 +237,38 @@ class AranymMidiGUI:
         pos_x = int(self.cfg.get("WINDOW_POS_X"))
         pos_y = int(self.cfg.get("WINDOW_POS_Y"))
         
-        # Query current screen dimensions
+        # Query current desktop layout dimensions
         screen_w = self.root.winfo_screenwidth()
         screen_h = self.root.winfo_screenheight()
 
-        # Clamp X coordinates to keep title bar within screen bounds
+        # Hard constraint: Reset to zero if dimensions drastically changed or corrupted
+        if width > screen_w: width = 600
+        if height > screen_h: height = 200
+
+        # Boundary check: Ensure the left edge is visible
+        if pos_x < 0: 
+            pos_x = 0
+            
+        # Boundary check: If right edge or whole window falls off-screen due to smaller resolution
+        if pos_x > screen_w - width or (pos_x + width) > screen_w: 
+            pos_x = screen_w - width
+
+        # Boundary check: Ensure the top title bar edge is visible
+        if pos_y < 0: 
+            pos_y = 0
+            
+        # Boundary check: If bottom edge falls off-screen (leaving 40px margin for Windows taskbar)
+        if pos_y > screen_h - height - 40 or (pos_y + height) > screen_h - 40: 
+            pos_y = screen_h - height - 40
+            
+        # Emergency backup: If any calculation failed or went negative, enforce desktop anchoring
         if pos_x < 0: pos_x = 0
-        if pos_x > screen_w - width: pos_x = screen_w - width
-        
-        # Clamp Y coordinates to keep title bar within screen bounds (leave room for taskbar)
         if pos_y < 0: pos_y = 0
-        if pos_y > screen_h - height - 40: pos_y = screen_h - height - 40
         
-        # Apply validated coordinates to geometry string
+        # Apply fully validated coordinates to geometry execution string
         self.root.geometry(f"{width}x{height}+{pos_x}+{pos_y}")
         self.root.configure(bg="#2e2e2e")
+
 
 
         # Instantiate logic engines
