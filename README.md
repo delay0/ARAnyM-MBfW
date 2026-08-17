@@ -5,7 +5,7 @@ A resource-friendly, Python-script-based real-time MIDI bridge designed to autom
 MBfW monitors the emulator's generated file dump via the Windows file cache and streams the data latency-free to a selectable synthesizer or MIDI port.
 
 <p align="center">
-  <img src="ARAnyM-MBfWv1.png" alt="ARAnyM MIDI Bridge GUI">
+  <img src="aranym-mbfw.png" alt="ARAnyM MIDI Bridge GUI">
 </p>
 
 ---
