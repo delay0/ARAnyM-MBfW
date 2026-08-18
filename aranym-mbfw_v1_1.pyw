@@ -35,7 +35,7 @@ class ConfigManager:
             "WINDOW_POS_X": "100",
             "WINDOW_POS_Y": "100",
             "AUTO_RECONNECT": "0",
-            "AUTO_EXIT": "1",
+            "AUTO_EXIT": "0",
             "START_EMULATOR": "1"
         }
 
